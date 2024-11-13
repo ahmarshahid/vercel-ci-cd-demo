@@ -11,9 +11,13 @@
 <body>
    >Welcome to Vercel CI/CD Demo</h1>
 <h1>Welcome to Vercel CI/CD Demo</h1>
-<p>Your secret key is: <span id="secretKey"></span></p>
-<script> const secretKey = process.env.MY_SECRET_KEY;
-    document.getElementById("secretKey").textContent = secretKey; </script>
+
+<h1>API URL is: <span id="MY_SECRET_KEY">{{MY_SECRET_KEY}}</span></h1>
+
+<script> 
+    const apiUrl = document.getElementById('MY_SECRET_KEY').textContent;
+    console.log('Injected API URL:', apiUrl); 
+    </script>
 </body>
 
 </html>
